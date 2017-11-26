@@ -81,6 +81,12 @@ public class MainDbHelper extends SQLiteOpenHelper implements Serializable, Data
     private static final String KEY_AVAILABLE_KRUTHI = "Available_KRUTHI";
     private static final String KEY_TALUK = "Taluk";
     private static final String KEY_SPECIALITY = "Speciality";
+    private static final String KEY_GURU = "Guru";
+    private static final String KEY_VRUNDAVAN = "Vrundavan";
+    private static final String KEY_OLD_NAME = "Old_Name";
+    private static final String KEY_ROOPA = "Roopa";
+    private static final String KEY_OTHER = "Other";
+
 
     private Context mContext;
     private SQLiteDatabase mDataBase;
@@ -224,7 +230,11 @@ public class MainDbHelper extends SQLiteOpenHelper implements Serializable, Data
         assert cursor != null;
         String name = cursor.getString(1);
 
-        KathruMini kathruMini = new KathruMini(Integer.parseInt(cursor.getString(0)), name, cursor.getString(2),
+        String ankitha = cursor.getString(2);
+        if (null != ankitha && ankitha.isEmpty()){
+            ankitha = "ಅಂಕಿತನಾಮವಿಲ್ಲ";
+        }
+        KathruMini kathruMini = new KathruMini(Integer.parseInt(cursor.getString(0)), name, ankitha,
                 cursor.getInt(3), cursor.getInt(4));
 
         cursor.close();
@@ -252,6 +262,9 @@ public class MainDbHelper extends SQLiteOpenHelper implements Serializable, Data
                 int id = Integer.parseInt(cursor.getString(0));
                 String name = cursor.getString(1);
                 String ankitha = cursor.getString(2);
+                if (null != ankitha && ankitha.isEmpty()){
+                    ankitha = "ಅಂಕಿತನಾಮವಿಲ್ಲ";
+                }
                 int num = cursor.getInt(3);
                 int favorite = cursor.getInt(4);
 
@@ -448,6 +461,9 @@ public class MainDbHelper extends SQLiteOpenHelper implements Serializable, Data
                 int id = Integer.parseInt(cursor.getString(0));
                 String name = cursor.getString(1);
                 String ankitha = cursor.getString(2);
+                if (null != ankitha && ankitha.isEmpty()){
+                    ankitha = "ಅಂಕಿತನಾಮವಿಲ್ಲ";
+                }
                 int num = cursor.getInt(3);
                 int favorite = cursor.getInt(4);
 
@@ -486,7 +502,8 @@ public class MainDbHelper extends SQLiteOpenHelper implements Serializable, Data
         Cursor cursor = db.query(TABLE_KATHRU,
                 new String[] { KEY_SIBLINGS, KEY_BIRTH_PLACE, KEY_MOTHER, KEY_PROVINCE, KEY_DEATH,
                         KEY_VILLAGE, KEY_FATHER, KEY_TIME, KEY_OTHER_WORKS, KEY_CHILDREN, KEY_WORK, KEY_SPOUSE,
-                        KEY_AVAILABLE_KRUTHI, KEY_ANKITHA, KEY_TALUK, KEY_SPECIALITY, KEY_NAME },
+                        KEY_AVAILABLE_KRUTHI, KEY_ANKITHA, KEY_TALUK, KEY_SPECIALITY, KEY_NAME,
+                        KEY_GURU, KEY_VRUNDAVAN, KEY_OLD_NAME, KEY_ROOPA, KEY_OTHER },
                 KEY_KATHRU_ID+ "=?",
                 new String[] { String.valueOf(kathruId) }, null, null, null, null);
         if (cursor != null)
@@ -494,6 +511,10 @@ public class MainDbHelper extends SQLiteOpenHelper implements Serializable, Data
 
         assert cursor != null;
         EnumMap<KathruDetails.KEYS, String> kathruDetailsMap = new EnumMap<>(KathruDetails.KEYS.class);
+        String ankitha = cursor.getString(13);
+        if (null != ankitha && ankitha.isEmpty()){
+            ankitha = "ಅಂಕಿತನಾಮವಿಲ್ಲ";
+        }
 
         kathruDetailsMap.put(KathruDetails.KEYS.SIBLINGS , cursor.getString(0));
         kathruDetailsMap.put(KathruDetails.KEYS.BIRTH_PLACE , cursor.getString(1));
@@ -508,10 +529,15 @@ public class MainDbHelper extends SQLiteOpenHelper implements Serializable, Data
         kathruDetailsMap.put(KathruDetails.KEYS.WORK , cursor.getString(10));
         kathruDetailsMap.put(KathruDetails.KEYS.SPOUSE , cursor.getString(11));
         kathruDetailsMap.put(KathruDetails.KEYS.AVAILABLE_KRUTHI , cursor.getString(12));
-        kathruDetailsMap.put(KathruDetails.KEYS.ANKITHA , cursor.getString(13));
+        kathruDetailsMap.put(KathruDetails.KEYS.ANKITHA , ankitha);
         kathruDetailsMap.put(KathruDetails.KEYS.TALUK , cursor.getString(14));
         kathruDetailsMap.put(KathruDetails.KEYS.SPECIALITY , cursor.getString(15));
         kathruDetailsMap.put(KathruDetails.KEYS.NAME , cursor.getString(16));
+        kathruDetailsMap.put(KathruDetails.KEYS.GURU , cursor.getString(17));
+        kathruDetailsMap.put(KathruDetails.KEYS.VRUNDAVAN , cursor.getString(18));
+        kathruDetailsMap.put(KathruDetails.KEYS.OLD_NAME , cursor.getString(19));
+        kathruDetailsMap.put(KathruDetails.KEYS.ROOPA , cursor.getString(20));
+        kathruDetailsMap.put(KathruDetails.KEYS.OTHER , cursor.getString(21));
 
         KathruDetails kathruDetails = new KathruDetails(kathruId, kathruDetailsMap);
 

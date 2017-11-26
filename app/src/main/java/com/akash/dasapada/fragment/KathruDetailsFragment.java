@@ -122,7 +122,7 @@ public class KathruDetailsFragment extends Fragment {
             @Override
             public void updateUI(final KathruDetails kathruDetails) {
                 detailsTextView.setText(getDetailsInFormat(kathruDetails));
-                allVachanasButton.setText("ವಚನಗಳನ್ನು ತೆರೆಯಿರಿ");
+                allVachanasButton.setText("ಪದಗಳನ್ನು ತೆರೆಯಿರಿ");
                 allVachanasButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

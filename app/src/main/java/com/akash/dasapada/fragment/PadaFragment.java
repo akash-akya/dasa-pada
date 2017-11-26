@@ -106,7 +106,7 @@ public class PadaFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, final ViewGroup container, Bundle savedInstanceState) {
         setHasOptionsMenu(true);
-        View root = inflater.inflate(R.layout.vachana_pager_layout, container, false);
+        View root = inflater.inflate(R.layout.pada_pager_layout, container, false);
 
         myViewPagerAdapter = new MyViewPagerAdapter(vachana_minis);
         viewPager = (ViewPager) root.findViewById(R.id.vachana_view_pager);
@@ -272,7 +272,7 @@ public class PadaFragment extends Fragment {
         @Override
         public Object instantiateItem(final ViewGroup container, final int position) {
             LayoutInflater layoutInflater = (LayoutInflater) getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            final View view = layoutInflater.inflate(R.layout.vachana_text_view, container, false);
+            final View view = layoutInflater.inflate(R.layout.pada_text_view, container, false);
 
             mDbTask = new GetVachanaFromDb(new DbAccessTask.OnCompletion<Pada>() {
                 TextView vachanaTextView = view.findViewById(R.id.vachana_text);

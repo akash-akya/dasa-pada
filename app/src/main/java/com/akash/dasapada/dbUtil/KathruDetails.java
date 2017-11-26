@@ -43,6 +43,11 @@ public class KathruDetails implements Serializable{
             case TALUK: return "ತಾಲ್ಲೂಕು";
             case SPECIALITY: return "ಕೃತಿಯ ವೈಶಿಷ್ಟ್ಯ";
             case NAME: return "ದಾಸರ ಹೆಸರು";
+            case GURU: return "ಗುರುವಿನ ಹೆಸರು";
+            case VRUNDAVAN: return "ವೃಂದಾವನ ಇರುವ ಸ್ಥಳ";
+            case OLD_NAME: return "ಪೂರ್ವಾಶ್ರಮದ ಹೆಸರು";
+            case ROOPA: return "ರೂಪ";
+            case OTHER: return "ಇತರೆ";
         }
         return null;
     }
@@ -55,7 +60,7 @@ public class KathruDetails implements Serializable{
     private int id;
     private  EnumMap<KEYS,String> details;
 
-    public KathruDetails(int id, EnumMap<KEYS,String> details) {
+    KathruDetails(int id, EnumMap<KEYS, String> details) {
         this.id  = id;
         this.details = details;
     }
@@ -126,6 +131,31 @@ public class KathruDetails implements Serializable{
 
     public String getSpeciality() {
         return details.get(KEYS.SPECIALITY);
+    }
+
+    public String getGuru()
+    {
+        return details.get(KEYS.GURU);
+    }
+
+    public String getVrundavan()
+    {
+        return details.get(KEYS.VRUNDAVAN);
+    }
+
+    public String getOldname()
+    {
+        return details.get(KEYS.OLD_NAME);
+    }
+
+    public String getRoopa()
+    {
+        return details.get(KEYS.ROOPA);
+    }
+
+    public String getOther()
+    {
+        return details.get(KEYS.OTHER);
     }
 
     public int getId() {

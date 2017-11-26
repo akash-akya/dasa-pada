@@ -50,7 +50,7 @@ dasapadahana. An application for Android users, it contains kannada vachanas
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ವಚನಗಳನ್ನು ತೆರೆಯಿರಿ"
+                android:text="ಪದಗಳನ್ನು ತೆರೆಯಿರಿ"
                 android:id="@+id/btn_vachanas_link"
                 android:layout_marginTop="5dp"
                 android:theme="@style/Widget.AppCompat.Button.Borderless"

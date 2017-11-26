@@ -59,7 +59,13 @@ public class HtmlBuilder {
                 getLine(KathruDetails.textOf(KathruDetails.KEYS.AVAILABLE_KRUTHI), kathruDetails.getAvailableKruthi()) +
                 getLine(KathruDetails.textOf(KathruDetails.KEYS.ANKITHA), kathruDetails.getAnkitha()) +
                 getLine(KathruDetails.textOf(KathruDetails.KEYS.TALUK), kathruDetails.getTaluk()) +
-                getLine(KathruDetails.textOf(KathruDetails.KEYS.SPECIALITY), kathruDetails.getSpeciality());
+                getLine(KathruDetails.textOf(KathruDetails.KEYS.SPECIALITY), kathruDetails.getSpeciality())+
+                getLine(KathruDetails.textOf(KathruDetails.KEYS.GURU), kathruDetails.getGuru()) +
+                getLine(KathruDetails.textOf(KathruDetails.KEYS.VRUNDAVAN), kathruDetails.getVrundavan()) +
+                getLine(KathruDetails.textOf(KathruDetails.KEYS.OLD_NAME), kathruDetails.getOldname()) +
+                getLine(KathruDetails.textOf(KathruDetails.KEYS.ROOPA), kathruDetails.getRoopa()) +
+                getLine(KathruDetails.textOf(KathruDetails.KEYS.OTHER), kathruDetails.getOther());
+
         //        builder.append(getLine(KathruDetails.textOf(KathruDetails.KEYS.NAME), kathruDetails.getName()));
         return builder;
     }

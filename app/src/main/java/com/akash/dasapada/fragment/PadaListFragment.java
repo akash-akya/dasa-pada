@@ -85,7 +85,7 @@ public class PadaListFragment extends Fragment {
     private boolean isPartial;
     private String mSearchQuery;
     private Menu menu;
-    private VachanaListTask vachanaListTask;
+    private PadaListTask padaListTask;
 
     @BindView(R.id.vachana_list_progressBar) ProgressBar progressBar;
     @BindView(R.id.vachana_list_container) View vachanaListContainer;
@@ -168,11 +168,11 @@ public class PadaListFragment extends Fragment {
                 progressBar.setVisibility(View.VISIBLE);
                 vachanaListContainer.setVisibility(View.INVISIBLE);
                 noDataTv.setVisibility(View.INVISIBLE);
-                vachanaListTask =  new VachanaListTask(onCompletion, listType,
+                padaListTask =  new PadaListTask(onCompletion, listType,
                         query_text, kathruString, isPartial);
-                vachanaListTask.execute(kathruMini);
+                padaListTask.execute(kathruMini);
             } catch (NullPointerException e){
-                FirebaseCrash.log(TAG+" VachanaListTask.onPreExecute(): display elements are null.");
+                FirebaseCrash.log(TAG+" PadaListTask.onPreExecute(): display elements are null.");
             }
 
         }
@@ -199,15 +199,14 @@ public class PadaListFragment extends Fragment {
         }
     };
 
-
-    private static class VachanaListTask extends DbAccessTask<KathruMini, List<PadaMini>>{
+    private static class PadaListTask extends DbAccessTask<KathruMini, List<PadaMini>>{
         private final ListType listType;
         String queryString;
         String KathruName;
         boolean isPartial;
 
-        VachanaListTask(OnCompletion<List<PadaMini>> onCompletion,
-                        ListType listType, String queryString, String KathruName, boolean isPartial) {
+        PadaListTask(OnCompletion<List<PadaMini>> onCompletion,
+                     ListType listType, String queryString, String KathruName, boolean isPartial) {
             super(onCompletion);
             this.listType = listType;
             this.queryString = queryString;
@@ -249,7 +248,7 @@ public class PadaListFragment extends Fragment {
     @Override
     public void onStop() {
         super.onStop();
-        vachanaListTask.cancel(true);
+        padaListTask.cancel(true);
     }
 
     @Override

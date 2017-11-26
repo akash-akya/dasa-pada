@@ -295,7 +295,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
             case R.id.nav_kathru:
-                fragment = KathruListFragment.newInstance("ವಚನಕಾರರು", ListType.NORMAL_LIST);
+                fragment = KathruListFragment.newInstance("ರಚನಾಕಾರರು", ListType.NORMAL_LIST);
                 fragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                 fragmentManager.beginTransaction()
                         .replace(R.id.main_content, fragment, DRAWER_KATHRU_LIST)
@@ -305,7 +305,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
             case R.id.nav_favorite:
-                fragment = PadaListFragment.newInstance(null, "ನೆಚ್ಚಿನ ವಚನಗಳು", ListType.FAVORITE_LIST);
+                fragment = PadaListFragment.newInstance(null, "ನೆಚ್ಚಿನ ಪದಗಳು", ListType.FAVORITE_LIST);
                 fragmentManager.popBackStack(DRAWER_FAVORITE_VACHANA_LIST, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                 fragmentManager.beginTransaction()
                         .replace(R.id.main_content, fragment, DRAWER_FAVORITE_VACHANA_LIST)
@@ -315,7 +315,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
             case R.id.nav_favorite_kathru:
-                fragment = KathruListFragment.newInstance("ನೆಚ್ಚಿನ ವಚನಕಾರರು", ListType.FAVORITE_LIST);
+                fragment = KathruListFragment.newInstance("ನೆಚ್ಚಿನ ರಚನಾಕಾರರು", ListType.FAVORITE_LIST);
                 fragmentManager.popBackStack(DRAWER_FAVORITE_KATHRU_LIST, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                 fragmentManager.beginTransaction()
                         .replace(R.id.main_content, fragment, DRAWER_FAVORITE_KATHRU_LIST)

@@ -30,7 +30,7 @@ dasapadahana. An application for Android users, it contains kannada vachanas
     <item
         android:id="@+id/action_kathru_detail"
         android:orderInCategory="100"
-        android:title="ವಚನಕಾರನ ಕುರಿತು"
+        android:title="ರಚನಾಕಾರರ ಕುರಿತು"
         app:showAsAction="never" />
 
 </menu>
