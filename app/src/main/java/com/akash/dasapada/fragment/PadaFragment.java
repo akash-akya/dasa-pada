@@ -336,7 +336,7 @@ public class PadaFragment extends Fragment {
 
         @Override
         protected Pada doInBackground(Integer... id) {
-            Log.d(TAG, "doInBackground: "+id[0]);
+            // Log.d(TAG, "doInBackground: "+id[0]);
             return MainActivity.getDatabaseReadAccess().getPada(id[0]);
         }
     }
