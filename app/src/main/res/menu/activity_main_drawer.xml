@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+dasapadahana. An application for Android users, it contains kannada vachanas
+  ~ Copyright (c) 2016. akash
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/menu_top"
+        android:checkableBehavior="all">
+        <item
+            android:id="@+id/nav_search"
+            android:icon="@drawable/ic_search_black_24dp"
+            android:title="ಹುಡುಕು" />
+    </group>
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_vachana"
+            android:icon="@drawable/ic_local_library_black_24dp"
+            android:title="ಯಾದೃಚ್ಛಿಕ ಪಗಳು" />
+        <item
+            android:id="@+id/nav_kathru"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="ರಚನಾಕಾರರು" />
+
+        <item
+            android:id="@+id/nav_favorite"
+            android:icon="@drawable/ic_stars_black_24dp"
+            android:title="ನೆಚ್ಚಿನ ಪಗಳು" />
+
+        <item
+            android:id="@+id/nav_favorite_kathru"
+            android:icon="@drawable/ic_stars_black_24dp"
+            android:title="ನೆಚ್ಚಿನ ರಚನಾಕಾರರು" />
+    </group>
+
+    <group android:id="@+id/menu_bottom"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="ಅಳವಡಿಕೆಗಳು" />
+        <item
+            android:id="@+id/nav_keyboard"
+            android:icon="@drawable/ic_keyboard_black_24dp"
+            android:title="ಕೀಲಿಮಣಿ ವಿನ್ಯಾಸ">
+        </item>
+        <!--<item-->
+            <!--android:id="@+id/nav_more_about_vachana"-->
+            <!--android:icon="@drawable/ic_info_black_24dp"-->
+            <!--android:title="ವಚನಗಳ ಕುರಿತು ಹೆಚ್ಚಿನ ಮಾಹಿತಿ">-->
+        <!--</item>-->
+        <item
+            android:id="@+id/nav_play_link"
+            android:icon="@drawable/ic_feedback_black_24dp"
+            android:title="ನಿಮ್ಮ ಅನಿಸಿಕೆ ತಿಳಿಸಿ">
+        </item>
+        <item
+            android:id="@+id/nav_about_app"
+            android:icon="@drawable/ic_android_black_24dp"
+            android:title="ತಂತ್ರಾಂಶದ ಕುರಿತು">
+        </item>
+    </group>
+</menu>

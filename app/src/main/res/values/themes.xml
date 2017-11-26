@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+dasapadahana. An application for Android users, it contains kannada vachanas
+  ~ Copyright (c) 2016. akash
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<resources>
+
+    <style name="Theme.theme1" parent="MyThemeLight">
+        <item name="colorPrimary">@color/color_set_1_primary</item>
+        <item name="colorPrimaryDark">@color/color_set_1_primary_dark</item>
+        <item name="colorControlActivated">@color/color_set_1_accent</item>
+        <item name="colorAccent">@color/color_set_1_accent</item>
+    </style>
+
+    <style name="Theme.theme2" parent="MyThemeLight">
+        <item name="colorPrimary">@color/color_set_2_primary</item>
+        <item name="colorPrimaryDark">@color/color_set_2_primary_dark</item>
+        <item name="colorControlActivated">@color/color_set_2_accent</item>
+        <item name="colorAccent">@color/color_set_2_accent</item>
+    </style>
+
+    <style name="Theme.theme3" parent="MyThemeLight">
+        <item name="colorPrimary">@color/color_set_3_primary</item>
+        <item name="colorPrimaryDark">@color/color_set_3_primary_dark</item>
+        <item name="colorControlActivated">@color/color_set_3_accent</item>
+        <item name="colorAccent">@color/color_set_3_accent</item>
+    </style>
+
+    <style name="Theme.theme4" parent="MyThemeLight">
+        <item name="colorPrimary">@color/color_set_4_primary</item>
+        <item name="colorPrimaryDark">@color/color_set_4_primary_dark</item>
+        <item name="colorControlActivated">@color/color_set_4_accent</item>
+        <item name="colorAccent">@color/color_set_4_accent</item>
+    </style>
+
+    <style name="Theme.theme5" parent="MyThemeLight">
+        <item name="colorPrimary">@color/color_set_5_primary</item>
+        <item name="colorPrimaryDark">@color/color_set_5_primary_dark</item>
+        <item name="colorControlActivated">@color/color_set_5_accent</item>
+        <item name="colorAccent">@color/color_set_5_accent</item>
+    </style>
+
+    <style name="Theme.theme6" parent="MyThemeLight">
+        <item name="colorPrimary">@color/color_set_6_primary</item>
+        <item name="colorPrimaryDark">@color/color_set_6_primary_dark</item>
+        <item name="colorControlActivated">@color/color_set_6_accent</item>
+        <item name="colorAccent">@color/color_set_6_accent</item>
+    </style>
+</resources>
